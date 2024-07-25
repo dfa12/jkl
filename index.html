@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pandas</title>
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/pandaLogo.png" />
+	<script src="js/vue.global.js"></script>
+	<script src="js/axios.min.js"></script>
+	<!-- <script src="js/getData.js"></script> -->
+</head>
+
+<body id="app" οnlοad="initVue()">
+<section class="page-width">
+	<header>
+		<div class="logo">
+			<div><img src="img/logo.jpg" alt=""></div>
+			<div class="logo-text">
+				<p class="Chinese"><span>趣看大熊猫</span></p>
+				<p class="English"><span>Pandas</span></p>
+			</div>
+	    </div>
+		<!-- 搜索框 -->
+		<form class="search-box" target="_blank" method="get" action="https://www.baidu.com/s">
+			<input class="search-txt" type="text"  name="wd" placeholder="搜索" />
+			<input class="search-btn" type="submit" value="前往" >
+		</form>
+		
+		<div class="menu" ><!-- 导航栏 -->
+				<a href="index.html">首页</a>
+				<a href="video.html">熊猫视频</a>
+				<a href="interstThing.html">熊猫趣闻</a>
+				<a href="Start.html">熊猫明星</a>
+				<a href="book.html">熊猫书籍</a>
+				<a href="magazine.html">熊猫杂志</a>	
+				<a href="lju.html" class="active">熊猫外交</a>	
+				<a href="taolun.html">熊猫论坛</a>
+		</div>
+	</header>
+	<article>
+		<section class="book">
+			<p id="culture">熊猫外交</p>
+		</section>
+		<section class="books">
+			<section id="engTitle">Panda</section>
+			<hr style="width: 90%; border: 2px solid #009500;"/>
+			<!-- <div id="abroadIntro" v-for="data in abroadIntro">
+				<p>{{data.name}}</p> -->
+			<div id="abroadIntro">
+				<p>熊猫外交是指中国大陆通过赠送或巡展与商业性租借熊猫，来开展外交工作。</p>
+				<p>熊猫是中国的国宝。它曾经多次出国担任友好使者，为发展对外友好关系作出了不可磨灭的贡献。</p>
+				<p>唐朝武则天赠给日本天武天皇2只“白熊”和70张毛皮。最著名的“熊猫外交”发生在1972年，成就了中美外交上的一段蜜月时光。这年2月，美国总统尼克松来中国访问，周恩来总理宣布赠送给美国人民的一件隆重的国礼，这就是来自四川省宝兴县的大熊猫“玲玲”和“兴兴”。当年4月26日，当“玲玲”和“兴兴”乘专机从北京抵达华盛顿国家动物园时，受到8000名美国观众的冒雨迎接，开馆与观众见面第一个月，参观者就多达100余万。</p>
+				<p>从1957年到1982年的26年间，中国一共赠送给9个国家23只大熊猫。是中国在向境外赠送或租借大熊猫借以增进友好关系的外交方式。</p>
+			</div>
+			<p style="font-size: 35px;color:#000000 ;margin-top: 55px;font-family: 华文新魏;">旅居海外的国宝熊猫：</p>
+			<div class="abroad">
+				<div class="contry">				
+
+					<div class="item" >俄罗斯<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/ruyi.png"/><div>如意<p>2019年旅俄</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/dingding.png"/><div>丁丁<p>2019年旅俄</p></div></a>
+						</div>
+					</div>		
+									
+					<div class="item">韩国<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/huani.png"/><div>华妮(爱宝)<p>2016年旅韩</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/yuanxing.png"/><div>园欣(乐宝)<p>2016年旅韩</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/fubao.png"/><div>福宝<p>2020出生于韩国</p></div></a>
+						</div>
+					</div>
+					
+					<div class="item">美国<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/tiantian3.png"/><div>添添<p>2000年旅美</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/meixiang.png"/><div>美香<p>2000年旅美</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/gaogao.png"/><div>高高<p>2003年旅美</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/lele2.png"/><div>乐乐<p>2003年旅美</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/yaya.png"/><div>丫丫<p>2003年旅美</p></div></a>						
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/taishan.png"/><div>泰山<p>2005年出生于美国</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/meilan.png"/><div>美兰<p>2006年出生于美国</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/abao4.png"/><div>阿宝<p>2010年出生于美国</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/xiaoliwu.png"/><div>小礼物<p>2012年出生于美国</p></div></a>						
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/baobao4.png"/><div>宝宝<p>2013年出生于美国</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/beibei4.png"/><div>贝贝<p>2015年出生于美国</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/xiaoqiji.png"/><div>小奇迹<p>2020年出生于美国</p></div></a>							
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/baiyun.png"/><div>白云<p>1996年旅美</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/lunlun2.png"/><div>伦伦<p>1999年旅美</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/huamei.png"/><div>华美<p>1999年出生于美国</p></div></a>
+							
+						</div>
+					</div>
+					
+					<div class="item">日本<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/lingling2.png"/><div>玲玲<p>1992年旅日</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/yongming.png"/><div>永明<p>1994年旅日</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/liangbing.png"/><div>良浜<p>2000年出生于日本</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/dandan.png"/><div>旦旦<p>2000年旅日</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/xingxing2.png"/><div>兴兴<p>2002年旅日</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/taobing.png"/><div>桃浜<p>2014年出生于日本</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/yingbing.png"/><div>樱浜<p>2014年出生于日本</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/xiangxiang2.png"/><div>香香<p>2017年出生于日本</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/fengbing.png"/><div>枫浜<p>2021年旅日</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/xiaoxiao2.png"/><div>晓晓<p>2021年出生于日本</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/leilei2.png"/><div>蕾蕾<p>2021年出生于日本</p></div></a>
+													
+						</div>
+					</div>
+					
+					<div class="item">卡塔尔<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/jingjing.png"/><div>京京<p>2022年旅居卡塔尔</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/sihai.png"/><div>四海<p>2022年旅居卡塔尔</p></div></a>
+						</div>
+					</div>
+					<div class="item">西班牙<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/huazuiba.png"/><div>花嘴巴<p>2007年旅居西班牙</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/bingxing.png"/><div>冰星<p>2007年旅居西班牙</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/abao1.png"/><div>阿宝<p>2010年出生于西班牙</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/zhulina.png"/><div>竹莉娜<p>2016年出生于西班牙</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/jiujiuyouyou.png"/><div>久久<p>2021年出生于西班牙</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/youyoujiujiu.png"/><div>友友<p>2021年出生于西班牙</p></div></a>
+						</div>
+					</div>
+					<div class="item">新加坡<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/jiajia.png"/><div>嘉嘉<p>2012年旅居新加坡</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/kaikai.png"/><div>凯凯<p>2012年旅居新加坡</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/lele.png"/><div>叻叻<p>2021年出生于新加坡</p></div></a>
+						</div>
+					</div>
+					<div class="item">加拿大<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/ershun.png"/><div>二顺<p>2013年旅居加拿大</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/damao.png"/><div>大毛<p>2013年旅居加拿大</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/jiayueyue.png"/><div>加悦悦<p>2015年出生于加拿大</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/jiapanpan.png"/><div>加盼盼<p>2015年出生于加拿大</p></div></a>
+						</div>
+					</div>
+					
+					<div class="item">比利时<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/haohao.png"/><div>好好<p>2014年旅居比利时</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/tianbao2.png"/><div>天宝<p>2016年出生于比利时</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/baomei.png"/><div>宝妹<p>2019年出生于比利时</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/baodi.png"/><div>宝弟<p>2019年出生于比利时</p></div></a>
+						</div>
+					</div>
+					
+					<div class="item">芬兰<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/huabao.png"/><div>华豹<p>2018年旅居芬兰 </p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/jinbaobao.png"/><div>金宝宝<p>2018年旅居芬兰 </p></div></a>												
+						</div>
+					</div>
+					
+					<div class="item">丹麦<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/xinger.png"/><div>星二<p>2019年旅居丹麦</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/maosun.png"/><div>毛笋<p>2019年旅居丹麦</p></div></a>
+						
+						</div>
+					</div>
+					
+					<div class="item">法国<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/huanhuan.png"/><div>欢欢<p>2012年旅法</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/huanhuan.png"/><div>圆仔<p>2012年旅法</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/huanliliyuandudu.png"/><div>欢黎黎<p>2021年出生于法国</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/yuanduduhuanlili.png"/><div>圆嘟嘟<p>2021年出生于法国</p></div></a>
+													
+						</div>
+					</div>
+					
+					<div class="item">荷兰<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/wujin.png"/><div>武雯<p>2017年旅居荷兰</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/xingya.png"/><div>星雅<p>2017年旅居荷兰</p></div></a>						
+						</div>
+					</div>
+					
+					<div class="item">马兰西亚<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/xingxing.png"/><div>兴兴<p>2014年旅马</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/niangniang.png"/><div>靓靓<p>2014年旅马</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/nuanuan.png"/><div>暖暖<p>2015年出生于马来西亚</p></div></a>
+
+						</div>
+					</div>
+					
+					
+					<div class="item">奥地利<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/yuanyuan2.png"/><div>园园<p>2019年旅奥</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/longhui.png"/><div>阳阳<p>2003年旅奥</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/longhui.png"/><div>龙徽<p>2003年旅奥</p></div></a>
+																			
+						</div>
+					</div>
+					
+					<div class="item">英国<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/tiantian.png"/><div>甜甜<p>2011年旅英</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/yangguang.png"/><div>阳光<p>2011年旅英</p></div></a>						
+						</div>
+					</div>
+					
+					<div class="item">德国<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/yanyan.png"/><div>嫣嫣<p>1995年旅居柏林</p></div></a>
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/mengmeng.png"/><div>梦梦<p>2017年旅德</p></div></a>						
+						</div>
+					</div>
+					
+					<div class="item">泰国<div class="nav">
+							<a href="https://baike.baidu.com/item/熊猫租借/2419770" target="_blank"><img src="img/linhui.png"/><div>林惠<p>2003年旅居泰国</p></div></a>
+													
+						</div>
+					</div>
+						
+				</div>
+			</div>
+		<h2 style="color: #000000;font-family: 华文行楷;font-size: 40px;">什么样的大熊猫能留洋？64只大熊猫旅居海外</h2>
+		<div id="goAbroad">
+			<h4 style="color: #005500;font-family: 华文新魏;font-size: 25px;">大熊猫为何会成为国宝？</h4>
+			<p style="text-indent: 2em;">大熊猫目前仅分布于四川省、陕西省和甘肃省的山区。大熊猫家族曾经的分布范围广及中国长江、珠江和黄河三大流域，还曾遍及东南亚的泰国、缅甸和老挝等地。200万至300万年前，当第四纪冰期降临时，地球开启了寒冷模式，为了生存，大熊猫改变体型，改变习性，靠竹子为生，熬过漫漫寒冬，成为自然进化的胜利者。</p>
+			<p style="text-indent: 2em;">专家认为，大熊猫憨态可掬的外表、悠久的生物学历史、稀少的数量、强壮的身体、不争的秉性以及与中国传统文化的耦合等特性，与现代中国的形象和倡导理念相符，当之无愧地被称之为中国的国宝。</p>
+		</div>
+		
+		<div id="goAbroad">
+			<h4 style="color: #005500;font-family: 华文新魏;font-size: 25px;">世界上有多少只大熊猫？</h4>
+			<p style="text-indent: 2em;">2022年10月份数据显示，全球圈养大熊猫种群数量达到673只，较十年前增长近一倍。</p>
+			<p style="text-indent: 2em;">同时，野生大熊猫的数量也在增长。2021年的一份白皮书显示，大熊猫野外种群数量已经从40年前的1114只增至1864只。大熊猫野外种群受威胁程度等级由“濒危”降为“易危”。</p>
+		</div>
+		
+		<div id="goAbroad">
+			<h4 style="color: #005500;font-family: 华文新魏;font-size: 25px;">有多少只大熊猫旅居海外？</h4>
+			<p style="text-indent: 2em;">近日，旅日大熊猫香香、永明、樱浜、桃浜已陆续回国，旅美大熊猫丫丫也拟定下月回国。</p>
+			<p style="text-indent: 2em;">记者梳理发现，目前还有64只大熊猫生活在海外。其中，美国和日本的大熊猫最多，各有7只。另外，在比利时、法国、西班牙、荷兰、韩国、德国、新加坡、印度尼西亚、马来西亚、芬兰、澳大利亚、卡塔尔、奥地利、丹麦、俄罗斯、墨西哥、英国、泰国等地动物园也能看到大熊猫。</p>
+		</div>
+		
+		<div id="goAbroad">
+			<h4 style="color: #005500;font-family: 华文新魏;font-size: 25px;">如何向中国租借大熊猫？</h4>
+			<p style="text-indent: 2em;">新中国成立后，苏联、朝鲜、美国等9个国家获赠大熊猫，20余只大熊猫成为“友好使者”，向世界传递中国人民走和平发展之路的意愿。20世纪90年代中后期开始，为更好保护大熊猫，海外各国仅能在繁殖、保护、研究的前提下向中国租借大熊猫。</p>
+			<p style="text-indent: 2em;">大熊猫变为“科研交流大使”后，租借时长受到严格限制，需要与中方签订大熊猫繁殖研究合作协议，一般租借一对健康、有繁殖能力的大熊猫，以10年至15年为周期，到期后可适当续约。如果租借时期熊猫在外产崽，熊猫宝宝也归中国所有，且熊猫宝宝在成年之前必须回到中国参与繁殖。倘若在外发生意外死亡，尸体也归中方。</p>
+		</div>
+		
+		<div id="goAbroad">
+			<h4 style="color: #005500;font-family: 华文新魏;font-size: 25px;">大熊猫在国外如何安居？</h4>
+			<p style="text-indent: 2em;">新华社2008年曾报道，当年，中国与美国签署的熊猫续租费用为每年50万美元。留洋熊猫获得的外汇，用于野生大熊猫的保护和人工环境下的大熊猫科研。除了租借费用，外国租借大熊猫还有运营管理费、饲养费、保险费用等各项支出。</p>
+			<p style="text-indent: 2em;">卡塔尔世界杯前夕，中国曾向卡塔尔送上了一份大礼——国宝大熊猫一对。为此，卡塔尔斥巨资修建了熊猫馆。饮食上，熊猫们每天吃的新鲜竹子都是从中国老家空运而来，随着竹子进口的还有辅食如胡萝卜、苹果和玉米面饼子等。为了能让熊猫吃好，比利时的动物园为大熊猫专门开辟了4公顷的专属竹林，竹子的品种也经过精挑细选。</p>
+		</div>
+		
+		<div id="goAbroad">
+			<h4 style="color: #005500;font-family: 华文新魏;font-size: 25px;">什么样的大熊猫能留洋？</h4>
+			<p style="text-indent: 2em;">前往海外的大熊猫一定程度上代表着中国野生动物保护的形象，能前往海外的大熊猫，多是大熊猫中的明星。每次选拔出国的大熊猫都颇费周折。比如，有些嘴巴太长的，脸蛋不圆的，毛色不清晰的，身体不健康的，喜欢打架显得不和谐的，都被排除在外。</p>
+			<p style="text-indent: 2em;">同时，出国的大熊猫不能有忧郁症，不能有怪癖，不能有刻板行为。大熊猫刻板行为是指一种随意的、反复的、无意义的(常为节律性)运动，通常表现为摇摆躯体、摇摆头颅、拔毛、捻发、咬指甲、吮拇指或挖鼻孔等。</p>
+		</div>
+		
+		<div id="goAbroad">
+			<h4 style="color: #005500;font-family: 华文新魏;font-size: 25px;">一只大熊猫能活多少年？</h4>
+			<p style="text-indent: 2em;">野生大熊猫的最高寿命为26岁，平均寿命为15到20岁。人工圈养条件下，大熊猫的寿命会更长，最高可达38岁，平均寿命为20到30岁，一般超过20岁就被认为是老年大熊猫。</p>
+			<p style="text-indent: 2em;">曾生活在香港海洋公园的雌性大熊猫“佳佳”和重庆动物园的雌性大熊猫“新星”都活到了38岁，相当于人类的110岁。旅美大熊猫“丫丫”今年已经23岁，相当于人类的80岁左右。</p>
+		</div>
+		
+		<div id="goAbroad">
+			<h4 style="color: #005500;font-family: 华文新魏;font-size: 25px;">大熊猫回国后如何安家？</h4>
+			<p style="text-indent: 2em;">旅居海外的大熊猫回国后，并不意味着很快就能参与集体生活、繁衍后代。大熊猫回国后要过的第一关是隔离检疫。我国政府规定，任何活体动物入境都要接受一定时间段的隔离检疫。隔离检疫期满之后，第二关是适应故乡的生活。这其中，包括了“饮食关”“语言关”。如何接受中方饲养员、听得懂四川方言和接受四川的食物，是远比隔离检疫更为难迈的坎。</p>
+			<p style="text-indent: 2em;">根据此前的经验，凡旅居海外的大熊猫回国，跨过“饮食关”“语言关”往往需要三四个月时间。第三关是“繁殖关”。比如，此次回国的樱浜、桃浜和香香都要在老家四川找到心仪的对象，并完成繁育下一代的任务。那么，旅居海外的大熊猫一般要多久才能诞下下一代？根据可查的资料显示，一般旅居海外的大熊猫多会在回国的第三年才迎来诞生下一代。</p>
+		</div>
+		
+		<div id="goAbroad">
+			<h4 style="color: #005500;font-family: 华文新魏;font-size: 25px;">是如何给大熊猫取名的？</h4>
+			<p style="text-indent: 2em;">每只大熊猫都有属于自己个性的名字，有的俏皮可爱，有的意蕴深长。这些名字都是如何取的呢？据成都大熊猫繁育研究基地工作人员介绍，第一类是公开征集。大家最熟悉的莫过于团团和圆圆。2005年5月，大陆方面宣布向台湾同胞赠送一对象征和平团结友爱的大熊猫。当年的春节联欢晚会上，通过一亿多名观众们投票，它们得到了“团团”“圆圆”两个寓意美满的名字。</p>
+			<p style="text-indent: 2em;">第二类是官方发布。例如，1999年8月，美国圣地亚哥动物园从中国租借的大熊猫“白云”产下头胎，取了象征两国人民友好的芳名“华美”。第三类是公益冠名。可以是国际组织或保护机构命名并授予其形象大使，还可以是邀约冠名。比如，熊猫“科比”出生时正值1992年巴塞罗那举办奥运会，前国际奥委会主席萨马兰奇先生闻讯后非常高兴，随即给这只大熊猫取名为“科比”，与当年的奥运吉祥物同名。第四类则是继续沿用乳名。比如“芝士”“毛豆”等。</p>
+		</div>
+		
+		<div id="goAbroad">
+			<h4 style="color: #005500;font-family: 华文新魏;font-size: 25px;">如何认养一只大熊猫？</h4>
+			<p style="text-indent: 2em;">熊猫“花花”和弟弟“和叶”已经被一家广东企业认养。也有企业表示要认养旅美大熊猫“丫丫”。认养大熊猫这一活动又一次进入人们视野。在成都大熊猫繁育研究基地官网上可以看到，该基地会将认养大熊猫的单位和个人在官网的“爱心名录”栏目进行公示。记者在“终身认养”的捐助者名单中看到，成龙等人都终身认养了熊猫。</p>
+			<p style="text-indent: 2em;">陕西省林业科学院秦岭大熊猫繁育研究中心也曾发起认养活动。据报道，大熊猫认养分为年度认养、终身认养和冠名认养三种方式。其中，年度认养是以年为单位认养大熊猫，每只大熊猫每年认养费用为10万元；终身认养是对大熊猫进行一次性终生认养，每只大熊猫的终身认养费用为50万元；冠名认养是在对大熊猫进行一次性终生认养的同时，享有对该大熊猫冠名的权利。每只大熊猫的冠名认养费用为100万元。认养大熊猫的单位和个人享有对被认养大熊猫的知情权、探视权。认养费用将全额用于大熊猫繁育研究、饲养设施建设和公众教育工作，并自觉接受社会监督。</p>
+		</div>
+		
+		<div id="goAbroad">
+			<h4 style="color: #005500;font-family: 华文新魏;font-size: 25px;">大熊猫会一直被圈养吗？</h4>
+			<p style="text-indent: 2em;">2016年12月，我国通过《大熊猫国家公园体制试点方案》。2021年10月12日，大熊猫国家公园正式设立，地跨川陕甘三省，总面积约2.7万平方公里。今年的全国两会上，全国人大代表、成都大熊猫繁育研究基地的研究人员侯蓉表示：“繁育大熊猫只是其中一个阶段，我们最终的目标是要让它们恢复野性、回到野外，让野生大熊猫能够永久生存和繁衍下去。</p>
+			<p style="text-indent: 2em;">事实上，将圈养大熊猫放归野外的尝试早已开始。从2003年起，我国陆续建成位于四川卧龙国家级自然保护区的中国大熊猫保护研究中心核桃坪野化培训基地、天台山野化培训基地，以及成都大熊猫繁育研究基地都江堰繁育野放研究中心。科研人员挑选体格强壮的大熊猫进行野化培训，脱离圈养“衣来伸手、饭来张口”的环境。中国大熊猫保护研究中心副主任、首席专家李德生今年1月接受媒体采访时表示，该中心先后放归了11只大熊猫到野外，其中有9只存活。</p>
+		</div>
+		<div style="text-align: center;">
+			<div style="float: left;width: 49%;">
+				<img src="img/haiwai1.gif" />
+			</div>
+			<div style="float: right;width: 49%;">
+				<img src="img/haiwai2.gif" />		
+			</div>
+			<div style="float: left;width: 49%;">
+				<img src="img/haiwai4.gif" />
+			</div>
+			<div style="float: right;width: 49%;">
+				<img src="img/haiwai3.gif" />		
+			</div>	
+			
+			<img src="img/haiwaifenbu.webp" />
+		</div>
+		</section>
+		
+	
+		
+	</article>
+	<footer class="footer">
+	    版权所有：趣看大熊猫
+	</footer>
+	
+    </section><!-- 页面宽度 -->
+	
+
+</body>
+
+</html>
